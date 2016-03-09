@@ -154,7 +154,8 @@ var Canvas = (function () {
         for (var i = 0; i < src.data.length; i += 4) {
             var rgb = src.data[i] + src.data[i+1] + src.data[i+2];
             var sum = rgb + src.data[i+3];
-            data.push(Math.sqrt(Math.min(sum,255)))
+            data.push(Math.sqrt(Math.min(sum,255)));
+//            $("#test").append(sum+'\n');
             dst.data[i] = dst.data[i+1] = dst.data[i+2] = rgb / 3;
             dst.data[i+3] = src.data[i+3];
         }

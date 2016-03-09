@@ -14,12 +14,25 @@
 {% block body %}
 <div id="main" class="column-group gutters">
     <div align="center" class="all-100 canvas-area">
+      <script>
+        var pre_b;
+        var b;
+        $(document).ready(function(){
+          rand_Function();
+        });
+        function rand_Function() {
+          pre_b = b;
+          b = Math.floor(Math.random() * 10);
+          $("#fun").html("<H1>Please input this number:"+b+"</H1>");
+        }
+      </script>
+        <div id="fun"></div>
         <div>
             <canvas id="canvas" width="170" height="170"></canvas>
         </div>
         <div>
             <button data-v-on="click: clear" class="ink-button btn-clear">Clear</button>
-            <button data-v-on="click: submit" class="ink-button blue btn-submit">Submit</button>
+            <button data-v-on="click: submit" class="ink-button blue btn-submit" onclick = "rand_Function()">Submit</button>
         </div>
         <div style="display:none">
             <img data-v-attr="src: showImage()"/>
