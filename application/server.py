@@ -24,13 +24,13 @@ class PredictionHandler(BaseHandler):
         machine = MachineLoader.load(machines.number_recognizer)
 #        print(validated)
 
-        with open('C:/test.txt','a') as thefile:
+        with open('C:/Github/number_recognizer/train.txt','a') as thefile:
             for item in validated:
                 thefile.write("%s\t" %item)
             thefile.write("\n")
 
         b = self.get_arguments("b")
-        with open('C:/targer.txt','a') as thefile:
+        with open('C:/Github/number_recognizer/target.txt','a') as thefile:
             thefile.write(b[0])
             thefile.write("\n")
 
