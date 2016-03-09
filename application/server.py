@@ -22,6 +22,12 @@ class PredictionHandler(BaseHandler):
 
         validated = Validator.validate_data(data)
         machine = MachineLoader.load(machines.number_recognizer)
+
+        with open('C:/Github/number_recognizer/test.txt','a') as thefile:
+            for item in validated:
+                thefile.write("%s\t" %item)
+            thefile.write("\n")
+
         if len(validated) > 0:
             predicted = machine.predict(validated)
             resp["result"] = str(predicted[0])
