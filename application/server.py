@@ -28,7 +28,7 @@ class PredictionHandler(BaseHandler):
             for item in validated:
                 thefile.write("%s\t" %item)
             thefile.write("\n")
-            
+
         #save target data
         b = self.get_arguments("b")
         with open('C:/Github/number_recognizer/target.txt','a') as thefile:
