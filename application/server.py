@@ -33,7 +33,8 @@ class PredictionHandler(BaseHandler):
         b = self.get_arguments("b")
         with open('C:/Github/number_recognizer/target_1.txt','a') as thefile:
             thefile.write(b[0])
-            thefile.write("\n")'''
+            thefile.write("\n")
+'''
 
         if len(validated) > 0:
             predicted = machine.predict(validated)
