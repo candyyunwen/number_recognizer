@@ -22,7 +22,7 @@ class PredictionHandler(BaseHandler):
 
         validated = Validator.validate_data(data)
         machine = MachineLoader.load(machines.number_recognizer)
-
+'''
         #save train data
         with open('C:/Github/number_recognizer/train_1.txt','a') as thefile:
             for item in validated:
@@ -33,7 +33,7 @@ class PredictionHandler(BaseHandler):
         b = self.get_arguments("b")
         with open('C:/Github/number_recognizer/target_1.txt','a') as thefile:
             thefile.write(b[0])
-            thefile.write("\n")
+            thefile.write("\n")'''
 
         if len(validated) > 0:
             predicted = machine.predict(validated)
